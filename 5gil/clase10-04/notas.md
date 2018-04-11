@@ -1,4 +1,9 @@
-# Git 
+# Temas vistos en clase 
+ - presentación
+ - ejercicios
+ - git
+
+### Git 
   - Folk
   - documento .md
 
@@ -20,6 +25,8 @@ Las siguientes ligas son las que seran utilizadas como apoyo para esta y otras c
 -  crear un archivo md y ver las multiples opciones
 - [Folk] - tutorial folk 
 - git stash 
+- mensajes estandarizacion de mensajes, ejemplo en la pagina de [Karma].
+- 
 
    [Folk]: <https://frontendlabs.io/3266--que-es-hacer-fork-repositorio-y-como-hacer-un-fork-github>
-
+   [Karma]: <http://karma-runner.github.io/2.0/dev/git-commit-msg.html>
