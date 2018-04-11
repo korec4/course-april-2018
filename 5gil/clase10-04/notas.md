@@ -4,7 +4,7 @@
  - git
 
 ### Git 
-  - Folk
+  - Fork
   - documento .md
 
 ### Ligas
@@ -20,13 +20,13 @@ Las siguientes ligas son las que seran utilizadas como apoyo para esta y otras c
 | archivo md | [https://dillinger.io][PlMe] |
 
 **Temas generales vistos en clase**
--  folk 
+-  fork 
 -  archivo gitignore
 -  crear un archivo md y ver las multiples opciones
-- [Folk] - tutorial folk 
+- [Fork] - tutorial fork 
 - git stash 
 - mensajes estandarizacion de mensajes, ejemplo en la pagina de [Karma].
 - 
 
-   [Folk]: <https://frontendlabs.io/3266--que-es-hacer-fork-repositorio-y-como-hacer-un-fork-github>
+   [Fork]: <https://frontendlabs.io/3266--que-es-hacer-fork-repositorio-y-como-hacer-un-fork-github>
    [Karma]: <http://karma-runner.github.io/2.0/dev/git-commit-msg.html>
