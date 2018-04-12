@@ -31,13 +31,15 @@ const createTable = (jsonData) => {
 		
 		let keyName = Object.keys(objectJson); 
 		
-		if(objectJson[keyName] === 'key_x'){
+		if(keyName == 'key_x'){
 			throw Error({
             type :'WARN',
             message:'No valid key'
         });
+			
 			continue;
-		}
+		
+		}  
 			
 		let rowTable = htmlTable.insertRow(htmlTable.rows.length);
 		let keyCell = rowTable.insertCell(0);
@@ -45,6 +47,7 @@ const createTable = (jsonData) => {
 		
 		keyCell.innerHTML = Object.keys(objectJson);
 		valueCell.innerHTML = objectJson[keyName];
+		
 	}
 	
 	
@@ -58,8 +61,11 @@ fetch('http://localhost:3000/data')
 
 	if(response.status === 200 || response.status === 304){ 		
 
-		let jsonData = response.json().then( (json) => createTable(json) );
-	
+			try{
+				response.json().then( (json) => createTable(json) );
+			}catch(errorTable){
+				
+			}
 		}
 	}
   )
