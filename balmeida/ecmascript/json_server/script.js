@@ -29,8 +29,9 @@ const createTable = (jsonData) => {
 	for (let objectJson  of jsonData){
 		
 		
+		let keyName = Object.keys(objectJson); 
 		
-		if(objectJson === 'key_x'){
+		if(objectJson[keyName] === 'key_x'){
 			throw Error({
             type :'WARN',
             message:'No valid key'
@@ -41,8 +42,6 @@ const createTable = (jsonData) => {
 		let rowTable = htmlTable.insertRow(htmlTable.rows.length);
 		let keyCell = rowTable.insertCell(0);
 		let valueCell = rowTable.insertCell(1);
-		
-		let keyName = Object.keys(objectJson); 
 		
 		keyCell.innerHTML = Object.keys(objectJson);
 		valueCell.innerHTML = objectJson[keyName];
