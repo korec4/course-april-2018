@@ -103,3 +103,134 @@ $ git push origin master
 
 fin
 
+
+# Clase 2: 11-Abril-2018
+Este dia hemos reforzado la clase de git con una practica para enfatizar comandos.
+
+ [Practice-git](https://github.com/grayghostvisuals/practice-git) Repo git para realizar fork y trabajar en el repositorio propio.
+ # Conceptos nuevos de Git
+ - git checkout
+ - git branch
+ - git log
+ - git status
+ - git diff
+ 
+  # Conceptos nuevos de EmacScript6
+   - Operador condicional ternario
+   - forEach
+   - for-of
+   - for-in
+  
+# Operador condicional (ternario)
+Una expresion se evalua como ***True*** o ***False*** 
+**Descripción**
+Si la condición es **true**, el operaador retorna el valor de la primera expresión; de lo contrario devuelve el valor de la expresion2. Por ejemplo:
+
+>Tenemos dos gatos llamados **Nube** y **Esponja**
+>Nube le gusta el jamón y a Esponja las croquetas
+
+Entonces podremos realizar la siguiente función:
+
+```javascript
+    'la comida de Nube es: '+(isNube ? 'jamon' : 'croquetas')
+````
+# forEach
+forEach es exclusivo de la familia de los arrays (arreglos), solo funciona con datos de matrices el metodo basicamente itera sobre los elementos de la matriz y ejecuta la devolucion de la llamada
+```js
+ const array = [1,2,3,4];
+ array.forEach(element => {
+    console.log(element)
+ }
+```
+# for in
+el for-in es aplicable sobre un dato de tipo objeto, valor que itera sobre las propiedades del objeto. ejemplo
+
+```js
+ const meObject = {
+    name: "Alejandro"
+    activity: "web developer"
+ }
+ for(let property in meObject){
+    console.log(property)    
+}
+```
+# for of
+for of es un loop (bucle) que itera a travez de los elementos de un objeto iterable (incluyendo Array, Map, Set, String, TypeOfArray), ejecutando las sentencias de cada iteraci´ón con el valor del elemento que corresponda. ejemplo
+
+```js
+let iterable = [10, 20, 30];
+
+for(let value of iterable){
+ value +=1;
+ console.log(value);
+}
+```
+**Nota:**
+se debera usar la palabra **const** (constante) si el valor de la variable no sera modificado y debera ser al inicio, y **let** si su valor va a cambiar constantemente como es el caso de este bloque.
+
+#Ejemplos for of
+
+**Iterando un Array**
+```js
+let iterable = [10,20,30];
+for(let value of iterable){
+    value +=1;
+    console.log(value);
+}
+
+/**
+*vista en consola
+*11
+*21
+*31
+**/
+```
+
+**Iterando un TypedArray**
+
+```js
+let iterable = new Uint8Array([0x00, 0xff]);
+for(let value of iterable){
+    console.log(value)
+}
+//0
+//255
+```
+**Iterando un Map**
+```js
+let iterable = new Map([["a", 1], ["b", 2], ["c", 3]]);
+for (let entry of iterable) {
+  console.log(entry);
+}
+// ['a', 1]
+// ['b', 2]
+// ['c', 3]
+
+for (let [key, value] of iterable) {
+  console.log(value);
+}
+// 1
+// 2
+// 3
+```
+**Iterando un Set
+```js
+let iterable = new Set([1, 1, 2, 2, 3, 3]);
+for (let value of iterable) {
+  console.log(value);
+}
+// 1
+// 2
+// 3
+```
+  # Referencias:
+  [Trello](https://trello.com/b/j87TzTJ2/tablero-sin-t%C3%ADtulo): Herramienta online que usaremos como marco de trabajo (scrum). Trello es un software de administración de proyectos con interfaz web, cliente para iOS y android para organizar proyectos.
+  [MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Conditional_Operator): Operador condicional ternario
+ [Codeburst.io](https://codeburst.io/foreach-vs-for-of-vs-for-in-tug-of-for-d8f935396648): forEar vs for-of vs for-in
+[Lodash](https://lodash.com/): Moderna librearia js
+[Moment.js](https://momentjs.com/): Libreria js para manipular fechas
+
+hasta la proxima...
+
+
+
