@@ -15,7 +15,6 @@
 > estrutura del condicional "if"
 	(https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=797:if-else-if-else-if-javascript-condicionales-del-flujo-o-estructuras-de-decision-ejemplos-ejercicios-cu01119e&catid=78&Itemid=206)
 
-
 ### Libreria Moment.js
 > La libreria te permite conocer fechas y horas de cualquier pais 
 	(https://momentjs.com/)
