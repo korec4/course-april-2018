@@ -4,7 +4,7 @@ const usingFetch = () => {
 
     fetch(URL)
         .then(response => response.json())
-        .then(objetoJSON => {
+        .then(objetJSON => {
             for (const objet in objetJSON) {
                 document.getElementById('key').innerHTML += objet + '<br>';
                 document.getElementById('value').innerHTML += objetJSON[objet] + '<br>';

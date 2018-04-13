@@ -32,6 +32,8 @@ $ git clone
 $ git add
 $ git commit
 $ git push
+$ git remote add
+$ git pull
 ```
 
 ### Una breve explicacion sobre estos comandos mas usados
@@ -43,3 +45,5 @@ $ git push
 | git add | Agrega o anade archivos o carpetas para su posterior commit |
 | git commit | Hace un commit de los archivos que hemos agregado |
 | git push | Sube al repositorio los archivos que estaban en commit |
+| git remote add | Agrega un repositorio para poder extraer datos de él pero no para enviar |
+| git pull | Extrae de un repositorio remoto los cambios que no están presentes en el repositorio local |
