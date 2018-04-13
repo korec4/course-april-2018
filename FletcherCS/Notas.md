@@ -1,3 +1,10 @@
+#Notas del segundo día del curso
+
+
+
+
+
+
 # Notas del primer dia del curso de Polymer
 
 Las cosas que he hecho hoy son:
