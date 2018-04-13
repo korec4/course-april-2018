@@ -55,3 +55,8 @@ excluye archivo especifico de ser ignorado
 
 ignora directorios
 - dir/
+
+ignora subdirectorios que se puedan encontrar dentro de varios subdirectorios
+- **/subdir
+
+**solo de haber un archivo gitignore en todo el proyecto**
