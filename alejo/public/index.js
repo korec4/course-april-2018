@@ -4,7 +4,7 @@
     const URL = 'https://jsonplaceholder.typicode.com/';
 
     //message of welcome to the user
-    document.getElementById('message').innerHTML = `<span>Select a item to look:</span><br>`;
+    document.getElementById('selectMessage').innerHTML = `<span>Select a item to look:</span><br>`;
 
     /**
      * This nethod validate a response if not code 200 write on message and return a null
