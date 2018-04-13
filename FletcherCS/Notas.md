@@ -4,13 +4,26 @@
 
 ## Aprendizaje del día de hoy
 
- -
- -
- -
- -
- -
- -
-
+ - ***i18n***
+    - Se refiere a la internacionalización
+ - Sólo existe un *.gitignore* para todo el equipo
+ - Ya no debe existir *function* para ello usaremos las *arrow function*
+ - HTML5
+    - Uso correcto de *table*
+        ```HTML
+            <table>
+                <thead>Head</thead>
+                <tbody>Body</tbody>
+                <tfoot>Footer</tfoot>
+            </table>
+        ```
+ - Evitar el uso anidado de *for*
+ - Uso de *const* dentro de un for
+    - Podemos hacer uso de *conts* dentro de un for siempre y cuando este sea un *for-of* o *for-in*
+ - El uso de *querySelector*
+    - Podemos hacer uso de *querySelector* cuando no sea posible etiquetar todas las instancias de un nodo
+- DOM
+    - Al querer cambiar un objeto la etiqueta <javascript> debe ir al final de la etiqueta </body> para que se pueda cargar todo el template
 ***
 # Notas del segundo día del curso (11/04/2018)
 ### Frase del día
@@ -40,7 +53,7 @@
     ```Javascript 
         <expression> ? <function> : <function>
     ```
-4. Deshuso de *forEach* y remplazarlo por ***for-on***
+4. Deshuso de *forEach* y remplazarlo por ***for-of***
 5. Uso de ***for-in*** únicamente para los objetos
 6. Todas las funciones son declaradas con **const**
 7. El uso correcto del ***throw***
@@ -82,7 +95,7 @@
 Para las buenas prácticas durante este curso se hará uso de las siguientes reglas
  1. Uso obligatorio de ***use strict***
  2. Uso de llaves (*{}*) y punto y coma (*;*) obligatorio
- 3. Uso de **CamelCase** para funciones y variables
+ 3. Uso de **camelCase** para funciones y variables
  4. Todas las constantes van en *Uppercase*
  5. **No** está permitido hacer uso de comillas dobles (*" "*)
  6. Las clases inician con Mayúsculas
