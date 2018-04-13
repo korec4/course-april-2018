@@ -1,17 +1,18 @@
 'use strict'
 
-let htmlTable = document.getElementById('tableData');
+const API_URL = 'http://localhost:3000';
+const htmlTable = document.getElementById('tableData');
 
 	//adding the headers to the table
 	
-let header = htmlTable.insertRow(0);
+const header = htmlTable.insertRow(0);
 	
-var keyHeader = header.insertCell(0);
-var valueHeader = header.insertCell(1);
+const keyHeader = header.insertCell(0);
+const valueHeader = header.insertCell(1);
 
 	// Add some text to the headers:
-keyHeader.innerHTML = "Key";
-valueHeader.innerHTML = "Value";
+keyHeader.innerHTML = 'Key';
+valueHeader.innerHTML = 'Value';
 
 /*
 *@param jsonData:json 
@@ -20,10 +21,7 @@ valueHeader.innerHTML = "Value";
 const createTable = (jsonData) => {
 	 
 	if(jsonData === undefined){
-		 throw Error({
-            type :'FATAL',
-            message:'No data from server'
-        });
+		 throw 'No data from server';
 	}
 	
 	for (let objectJson  of jsonData){
@@ -32,11 +30,8 @@ const createTable = (jsonData) => {
 		let keyName = Object.keys(objectJson); 
 		
 		if(keyName == 'key_x'){
-			throw Error({
-            type :'WARN',
-            message:'No valid key'
-        });
-			
+			throw 'No valid key';
+        	
 			continue;
 		
 		}  
@@ -55,7 +50,7 @@ const createTable = (jsonData) => {
 };
  
  
-fetch('http://localhost:3000/data')
+fetch(API_URL+'/data')
   .then(
     (response)=> {
 
@@ -64,11 +59,11 @@ fetch('http://localhost:3000/data')
 			try{
 				response.json().then( (json) => createTable(json) );
 			}catch(errorTable){
-				
+				// @todo handle exception  
 			}
 		}
 	}
   )
-  .catch(function(err) {
-    console.log('Fetch Error :-S', err);
+  .catch(function(error) {
+    throw 'Fetch Error :-S ${error}';
   });
