@@ -1,18 +1,24 @@
 notas del día
 
-javascript no es orientado a objetos es orientado a prototipos (lo que sea quue eso signifque)
+## Datos curiosos de Javascript
 
-declarar variables const nombre = tipo;
+ - Javascript [no][dill] es orientado a objetos  es orientado a prototipos :pokerface:
 
-declarar funciones const funcion = () => {
-    let boo = "";
-};
+ - Ecmascript 6 (2015) trajo consigo enormes cambios en algunas secciones, es uno de los más estables (link de la docu).
+ 
+## Nuevos cambios de javascript con ES6
+ 
+ - Todas las variables (var) son renombradas con const o let según convenga, pero es altamente recomendado hacer uso de const siempre.
+ 
+ - Se deja de ocupar la palabra reservada *funtion* y es representada ahora por una *arrow funtion* '=>'
+  
+  - De ser necesario se pueden declarar valores por defecto de los parametros dentro de una función.
 
-parametros dentro de la funcion
-
-conts funcion = (param = '') => {}
-
-cuando necesariamente ocupemos esa variable
+ - El uso de *forEach* va en descenso y de hecho no se recomeinda hacer uso de él.
+ 
+ - Se introduce el uso de las funciones *asincronas* así como las *promises*
+ 
+ 
 
 mandar errores es de la forma
 
@@ -25,8 +31,6 @@ throw Error({
 uso del 'use strict' al inicio siempre y define todo.
 
 uso del typeOf
-
-diferencias entre === & ==
 
 uso del switch, usarlo despues de 3 o más
 
@@ -100,6 +104,6 @@ no se permiten los console.log, uso de debugging, breakpoint, uso de debugger, e
 
 no usar console.log para nada 
 nada de codigo muerto
-para extraer datos y no usar console.log, usemos console.log o debugger
+para extraer datos y no usar console.log, usemos endpoints debugger
 
 tener todo el ingles
