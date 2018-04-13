@@ -1,0 +1,19 @@
+{
+  "name": "api_fetch",
+  "version": "1.0.0",
+  "description": "learn to used api fetch",
+  "main": "index.js",
+  "scripts": {
+    "test": "tester api fetch "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Akira669/course-april-2018.git"
+  },
+  "author": "Adolfo Posadas (akira669)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Akira669/course-april-2018/issues"
+  },
+  "homepage": "https://github.com/Akira669/course-april-2018/12-april-2018/API_fecth"
+}
