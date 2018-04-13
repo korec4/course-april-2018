@@ -1,0 +1,66 @@
+{
+  "homework": [
+    {
+      "id": 1,
+      "improvement": "language"
+    },
+    {
+      "id": 2,
+      "improvement": "indented"
+    },
+    {
+      "id": 3,
+      "improvement": "improve API"
+    },
+    {
+      "id": 4,
+      "improvement": "error handling"
+    },
+    {
+      "id": 5,
+      "improvement": "remove console.log()"
+    },
+    {
+      "id": 6,
+      "improvement": "functions with => "
+    },
+    {
+      "id": 7,
+      "improvement": "remove commented files"
+    },
+    {
+      "id": 8,
+      "improvement": "use correctly EcmaScript or treat"
+    },
+    {
+      "id": 9,
+      "improvement": "Sebastian"
+    },
+    {
+      "id": 10,
+      "improvement": "Sebastian"
+    },
+    {
+      "id": 11,
+      "task": "bar"
+    },
+    {
+      "task": "ipsum",
+      "id": 12
+    },
+    {
+      "task": "bar",
+      "id": 13
+    },
+    {
+      "foo": "bar",
+      "task": "ipsum",
+      "id": 14
+    },
+    {
+      "foo": "ba",
+      "task": "Investigate correctly before trying",
+      "id": 15
+    }
+  ]
+}
