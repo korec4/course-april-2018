@@ -5,7 +5,6 @@
 
     //message of welcome to the user
     document.getElementById('selectMessage').innerHTML = `<span>Select a item to look:</span><br>`;
-    const select = document.getElementById('options');
 
     /**
      * This nethod validate a response if not code 200 write on message and return a null
