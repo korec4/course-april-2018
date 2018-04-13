@@ -1,0 +1,15 @@
+{
+  "name": "clase12",
+  "version": "1.0.0",
+  "description": "consumir una api ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -p 8000"
+  },
+  "author": "Sandra Gil Rosales",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
