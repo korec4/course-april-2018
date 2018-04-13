@@ -1,7 +1,7 @@
 'use strict';
 
 const URL = 'http://localhost:3000/employees';
-var table = `<table>
+let table = `<table>
                 <tr>
                     <th>Key</th>
                     <th>Value</th>
