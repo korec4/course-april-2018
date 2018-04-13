@@ -1,0 +1,22 @@
+[
+  {
+      "id": 1,
+      "name": "Super Man",
+      "location": "Metropolis"
+    },
+    {
+      "id": 2,
+      "name": "Batman",
+      "location": "Gotham City"
+    },
+    {
+      "id": 3,
+      "name": "Spiderman",
+      "location": "New York"
+    },
+    {
+      "id": 4,
+      "name": "Iron Man",
+      "location": "New York"
+    }
+]
