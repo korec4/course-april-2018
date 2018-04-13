@@ -5,9 +5,9 @@ const usingFetch = () => {
     fetch(URL)
         .then(response => response.json())
         .then(objetoJSON => {
-            for (const objeto in objetoJSON) {
-                document.getElementById('key').innerHTML += objeto + '<br>';
-                document.getElementById('value').innerHTML += objetoJSON[objeto] + '<br>';
+            for (const objet in objetJSON) {
+                document.getElementById('key').innerHTML += objet + '<br>';
+                document.getElementById('value').innerHTML += objetJSON[objet] + '<br>';
             }
         }).catch( reject =>{
             throw Error({
