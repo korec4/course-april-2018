@@ -1,3 +1,6 @@
+#Notas del tercer día
+>Frase mamalona del día
+
 #Notas del segundo día del curso
 
 
@@ -5,7 +8,7 @@
 
 
 
-# Notas del primer dia del curso de Polymer
+# Notas del primer día del curso de Polymer
 
 Las cosas que he hecho hoy son:
 
@@ -15,9 +18,9 @@ Las cosas que he hecho hoy son:
 
 Los temas que he aprendido hoy:
 
-	- Uso avanzado de [Git]
-	- Uso de Markdown
-	- Herramientas/Paginas para resolver problemas de JS
+	- Uso avanzado de [git][dill]
+	- Uso de [Markdown][dill]
+	- Herramientas/Páginas para resolver problemas de [Javascript Ecmascript 6][dill]
 
 ## Git
 
