@@ -2,17 +2,8 @@
 
 const API_URL = 'http://localhost:3000';
 const htmlTable = document.getElementById('tableData');
-
-	//adding the headers to the table
 	
-const header = htmlTable.insertRow(0);
-	
-const keyHeader = header.insertCell(0);
-const valueHeader = header.insertCell(1);
-
-	// Add some text to the headers:
-keyHeader.innerHTML = 'Key';
-valueHeader.innerHTML = 'Value';
+htmlTable.innerHTML = '<thead> <tr> <th>Key</th> <th>Value</th> </tr> </thead>';
 
 /*
 *@param jsonData:json 
@@ -24,25 +15,11 @@ const createTable = (jsonData) => {
 		 throw 'No data from server';
 	}
 	
-	for (let objectJson  of jsonData){
-		
-		
+	for (const objectJson  of jsonData){
+				
 		let keyName = Object.keys(objectJson); 
-		
-		if(keyName == 'key_x'){
-			throw 'No valid key';
-        	
-			continue;
-		
-		}  
-			
-		let rowTable = htmlTable.insertRow(htmlTable.rows.length);
-		let keyCell = rowTable.insertCell(0);
-		let valueCell = rowTable.insertCell(1);
-		
-		keyCell.innerHTML = Object.keys(objectJson);
-		valueCell.innerHTML = objectJson[keyName];
-		
+		 
+		htmlTable.innerHTML += `<tr> <td> ${keyName} </td> <td> ${objectJson[keyName]} </td> </tr>`;
 	}
 	
 	
@@ -51,19 +28,15 @@ const createTable = (jsonData) => {
  
  
 fetch(API_URL+'/data')
-  .then(
-    (response)=> {
+  .then((response)=> {
 
 	if(response.status === 200 || response.status === 304){ 		
+		
+		response.json().then( (json) => createTable(json) );		
 
-			try{
-				response.json().then( (json) => createTable(json) );
-			}catch(errorTable){
-				// @todo handle exception  
-			}
 		}
 	}
   )
-  .catch(function(error) {
-    throw 'Fetch Error :-S ${error}';
+  .catch((error)=> {
+    throw `Fetch Error X/ : ${error}`;
   });

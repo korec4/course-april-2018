@@ -12,8 +12,10 @@
 - en clases la declaracion de funciones no se utiliza **const**
 - no console.log
 - _variable es privada, __variable es protegida
+- todas las funciones van afuera, con const y arrow 
+- para usar ${} necesita estar en  back-ticks `text ${value} text text ` 
 
-todas las funciones van afuera y con const
+
 
 ```
 const myFunction = (param = '') => {
