@@ -12,11 +12,12 @@
 
         response.json().then((users) => {
             const message = document.getElementById('message');
-            message.innerText = 'the connection is success!';
+            message.innerText = 'The connection is success: ' + URL;
             const tableData = document.getElementById('table');
+            tableData.innerHTML = `<thead><tr><th>ID</th><th>Name</th><th>Email</th></tr></thead>`;
 
             for(const user of users){
-                tableData.innerHTML +=  `<div><span> ${user.id} - </span><span> ${user.name} </span><span> ${user.email} </span></div>`;
+                tableData.innerHTML +=  `<tr><th> ${user.id} </th><th> ${user.name} </th><th> ${user.email} </th></tr>`;
             }
         });
     };
