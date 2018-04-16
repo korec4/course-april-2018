@@ -1,0 +1,17 @@
+body{
+    background-color: azure;
+}
+
+.message{
+    font-size: 24px;
+    color: blue;
+}
+
+.table-users{
+    text-align: left;
+    border: 1px solid;
+}
+
+.table-users > tr{
+    border: 1px solid;
+}
