@@ -17,7 +17,9 @@ const URL = 'http://localhost:8000/cuentas';
         message : 'There is no data'
       });
     }
-    dataJSON.json().then(createTable);
+    dataJSON.json().then( dataJSON.json().then(object => {
+      createTable(object);
+    });
   }
   ).catch(function(error) {
    if(error){
