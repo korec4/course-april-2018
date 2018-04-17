@@ -1,0 +1,18 @@
+{
+    "data" : 
+    [
+        {
+            "nombre" : "Paco",
+            "mascota": "perro"
+
+        },
+        {
+            "nombre" : "luis",
+            "mascota" : "gato"
+        },
+        {
+            "nombre" : "Josimar",
+            "mascota" : "loro"
+        }
+    ]
+}
