@@ -1,0 +1,11 @@
+# Lessons in Practice 12 april 2018
+-   Do not create dead coments
+-   use Camel case
+-   UPPER CASE in name's constant variables
+-   Use dot simple in string variables
+-   Do not use comment in line
+-   To concatenate `..."+...+"...` to `${...}`
+-   Use general endpoint to API RESTFull
+-   Use `**` for exclude directories in gitignore
+-   Use `// @todo` when we have pending work 
+-   Replace `'` to **`** for write large string and string in diferent lines
