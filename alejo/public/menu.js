@@ -5,6 +5,7 @@
     const sidenav = document.querySelector('.sidenav');
     const sidenavClose = document.querySelector('.sidenav-close');
     navbarButtonMobile.addEventListener('click', () => {
+        console.log('click the navbar_button-mobile');
         sidenav.classList.add('sidenav-active');
     });
 

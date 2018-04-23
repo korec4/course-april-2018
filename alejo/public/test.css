@@ -10,13 +10,13 @@
     --tile-size: 25px;
     --text-size: 16px;
     --on-hover-color: gray;
-
     --brand-black: #1d1e21;
     --bran-white: #e5d7d7;
 }
 
 body{
     font-family: 'Finger Paint', cursive;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -92,30 +92,24 @@ body{
     width: 300px;
     bottom: 0;
     right: -300px;
-
+    height: 100%;
     top: 0;
 
     transition: right .6s;
 }
-
 .sidenav{
-    display: initial;
+    display: none;
 }
-
-
-
 
 @media screen and (max-width: 768px){
 
-
-
     .sidenav{
-        display: none;
+        display: initial;
     }
-
 
     .sidenav-close{
         font-size: 30px;
+        cursor: pointer;
     }
 
     .sidenav__links{
@@ -135,7 +129,7 @@ body{
         font-family: 'Caudex', serif;
     }
 
-    .sidevar-active{
+    .sidenav-active{
         right: 0;
 
     }
