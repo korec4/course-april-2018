@@ -91,11 +91,11 @@ body{
     position: absolute;
     width: 300px;
     bottom: 0;
-    right: -300px;
+    right: 0;
     height: 100%;
     top: 0;
-
     transition: right .6s;
+    visibility: hidden;
 }
 .sidenav{
     display: none;
@@ -131,7 +131,7 @@ body{
 
     .sidenav-active{
         right: 0;
-
+        visibility: visible;
     }
 
     .navbar__container{
