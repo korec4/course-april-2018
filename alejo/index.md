@@ -232,5 +232,27 @@ for (let value of iterable) {
 
 hasta la proxima...
 
+ # Clase 11 de Abril de 2018
+ 
+ * NodeJS
+ 
+ NodeJS es un entorno de ejcusión para javascript construido con el motor v8 de chrome
+  Node.js usa un modelo de operaciones E/S sin bloqueo y orientado a eventos, que lo hace liviano y eficiente. 
+  El ecosistema de paquetes de Node.js, npm, es el ecosistema mas grande de librerías de código abierto ...
+
+ # Como instalar nodeJS
+ 
+ * Windows 
+ 
+ Descargar su instalador desde la pagina oficial de nodeJS y seguir los pasos (siguiente, siguiente...)
+ 
+ * Linux /MacOS
+ 
+ Desde el interprete de comando (bash) ingresa el comando
+ ```sh
+ $ curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash 
+ or
+ $ sudo apt-get install -y nodejs
+ ```
 
 
