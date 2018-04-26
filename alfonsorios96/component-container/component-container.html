@@ -1,0 +1,75 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../paper-button/paper-button.html">
+
+<dom-module id="component-container">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+            .container {
+                width: 100%;
+                height: 200px;
+                border: 1px solid black;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .images-container {
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
+        <div class="container">
+            <template is="dom-repeat" items="[[dataImages]]" as="column">
+                <div class="images-container" style$="width:[[column.width]]">
+                    <template is="dom-repeat" items="[[column.images]]" as="image">
+                        <img src="../images/[[image.url]]" alt="[[image.name]]" width="100%" height$="[[getImageHeight(column.images)]]">
+                    </template>
+                </div>
+            </template>
+        </div>
+    </template>
+
+    <script>
+        /**
+         * `component-container`
+         *
+         *
+         * @customElement
+         * @polymer
+         * @demo demo/index.html
+         */
+        class ComponentContainer extends Polymer.Element {
+            static get is() {
+                return 'component-container';
+            }
+
+            static get properties() {
+                return {
+                    dataImages: {
+                        type: Array,
+                        value: ''
+                    }
+                };
+            }
+
+            connectedCallback() {
+                super.connectedCallback();
+            }
+
+            getImageHeight(columns) {
+                const total = 200;
+                let height = total / columns.length;
+                this.dispatchEvent(new CustomEvent('height-changed', {
+                    composed: true,
+                    bubbles: true,
+                    detail: height
+                }));
+                return `${height}px`;
+            }
+        }
+
+        window.customElements.define(ComponentContainer.is, ComponentContainer);
+    </script>
+</dom-module>
