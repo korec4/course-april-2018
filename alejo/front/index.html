@@ -19,11 +19,11 @@
 					Escucha tu próximo libro gratis
 				</div>
 				<div class="text_content">
-					Encuentra tus libros favoritos en el catalogo de Central Academi con más de
-					200,000 audiolibros disponibles
+					<p>Encuentra tus libros favoritos en el</p>
+					<p>catalogo de Central Academi con más de <b>200,000</b></p>
+					<p>audiolibros disponibles</p>
 				</div>
 			</div>
-
 			<div class="grid__books">
 				<div class="book_first">
 					<img src="imgs/book1.jpg" alt="">
@@ -41,8 +41,8 @@
 					<img src="imgs/book9.jpg" alt="">
 				</div>
 			</div>
-			<div class="container_button">
-				<button class="button__test" type="button" id="button">Prueba 30 dias gratis</button>
+			<div class="description">
+				<button class="button__test" type="button" id="buttonModal">Prueba 30 dias gratis</button>
 				<div class="text__description">
 					<p>
 						Despues de 30 dias, $299 al mes
@@ -50,7 +50,34 @@
 					<p>Cancela cuando quieras.</p>
 				</div>
 			</div>
+			<div class="footer">
+				<div class="container__buttons">
+					<div class="button_discover" id="discover">
+						<img src="imgs/search-icon.png" alt="Descubre">
+						<p>Descubre</p>
+					</div>
+					<div class="button_download" id="download">
+						<img src="imgs/download-icon.png" alt="Descarga">
+						<P>Descarga</P>
+					</div>
+					<div class="button_listen" id="listen">
+						<img src="imgs/audio-icon.png" alt="Disfruta">
+						<p>Disfruta</p>
+					</div>
+				</div>
+				<div class="button_description" id="description"></div>
+			</div>
 		</div>
 	</section>
+	<dialog id="modalTest" class="modal">
+		<!-- Modal content -->
+		<div class="modal-head">
+			<span class="close" id="modalClose">&times;</span>
+		</div>
+		<div class="modal-content">
+			<img src="imgs/mockup_modal.png" alt="">
+		</div>
+	</dialog>
+	<script type="text/javascript" src="app.js"></script>
 </body>
 </html>
