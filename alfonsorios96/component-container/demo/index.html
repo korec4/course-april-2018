@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>component-container demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../component-container.html">
+
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic component-container demo</h3>
+      <demo-snippet>
+        <template>
+          <component-container data-images='[
+	{"width": "30%", "images": [{"name": "book1", "url": "book1.jpg"}, {"name": "book2", "url": "book2.jpg"}]},
+	{"width": "40%", "images": [{"name": "book5", "url": "book5.jpg"}]},
+	{"width": "30%", "images": [{"name": "book10", "url": "book10.jpg"}, {"name": "book9", "url": "book9.jpg"}]}
+]
+'></component-container>
+
+          <component-container data-images='[
+	{"width": "50%", "images": [{"name": "book1", "url": "book7.jpg"}, {"name": "book2", "url": "book8.jpg"}]},
+	{"width": "50%", "images": [{"name": "book10", "url": "book10.jpg"}, {"name": "book9", "url": "book11.jpg"}]}
+]
+'></component-container>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>
