@@ -124,21 +124,6 @@ body{
 	padding: 5px;
 }
 
-.img__button:hover{
-	box-sizing: border-box;
-	filter: brightness(120%);
-	border:1px solid;
-	color:var(--brand-white);
-}
-
-.img__button:active{
-  transform: scale(.9,.9);
-}
-
-.img__button:focus{
-	outline: none;
-}
-
 .main-content__button:hover{
 	filter: brightness(120%);
 	box-shadow: 1px 1px 5px var(--brand-black);
@@ -188,6 +173,22 @@ body{
 	--text-size:12px;
 	--layout-width:600px;
   }
+
+
+.img__button:hover{
+	box-sizing: border-box;
+	filter: brightness(120%);
+	border:1px solid;
+	color:var(--brand-white);
+}
+
+.img__button:active{
+  transform: scale(.9,.9);
+}
+
+.img__button:focus{
+	outline: none;
+}
   
   .logo-mobile{
 	  display:flex;
