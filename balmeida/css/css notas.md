@@ -18,10 +18,7 @@ feature queries
 
 box-sizing: border-box;  va tomar border,padding como parte del contenido
 
-div{
-
-}
-
+ 
 para standarizar tamaño de margenes y padding a todos los objetos
 
 *{

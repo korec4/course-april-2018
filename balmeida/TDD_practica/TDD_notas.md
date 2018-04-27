@@ -1,62 +1,36 @@
-#notas
+# TDD
 
-Upstream es el repositorio 'maestro'
-Origin es el repositorio de donde que esta basado en el upstream
-Local repo local
+- 1 pensar en pruebas unitarias que garantizen funcionalidad
+- 2 escribir el codigo minimo necesario
+- 3 refactorizar
 
-#git commands
+Jest
+sinon
 
-```sh
-git remote add origin <remote url>
-git remote add upstream <upstream_remote>
-git pull upstream <branch>
+## Objetos simulados
+
+- dummy: codigo hardcodeado/en duro, son datos de comparacion de assertions y de parametros.
+```js
+const dummy = {
+	error:'warn',
+	message:'some warning'
+}
+```
+- mocks: instancias con caracteristicas de pruebas de un objeto en particular
+```js
+const db = require('moongose');
+const mock = sinon.mock(db);
+```
+- spies: llamadas a funciones
+```js
+				//objeto - función
+const spy = sinon.spy(db, 'short');
+spy.calledOnce
+```
+- stubs: manejo de las funciones
+```js
+const stub = sinon.stub(db,'short').callsFake(()=>{return 5;});
 ```
 
-crea un branch 
-
-```
-git branch <branch>
-```
-
-crea un branch y se pasa al branch en un solo comando
-```
-git checkout -b <branch_name>
-```
-
-para pasar de staged a untracked, revierte el ultimo cambio
-```
-git reset <file/folder>
-```
-
-para fusionar branch en otra, cambiar a la cual se va fusionar p.e. master se fusiona con branch
-en master:
-git merge <branch>
-
-borra un branch siempre y cuando no estes en el branchs
-```
-git branch -d <branch>
-```
-
-##.gitignore
-
-Siempre crear el archivo .gitignore antes de hacer commit
-
-archivos especificos
-
-- archivo.ext
-
-ignora por archivos por extension
-
-- *.css
-
-excluye archivo especifico de ser ignorado
-
-- !readme.md
-
-ignora directorios
-- dir/
-
-ignora subdirectorios que se puedan encontrar dentro de varios subdirectorios
-- **/subdir
-
-**solo de haber un archivo gitignore en todo el proyecto**
+stub y spy, siempre usar la funcione .restore para cada caso de prueba, en mock es verify
+para limpiar datos 
