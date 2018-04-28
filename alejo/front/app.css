@@ -94,6 +94,7 @@ body{
     border-radius: 10px;
     color: var(--background-white);
     border: none;
+    box-shadow: 1px 1px 5px var(--background-blue);
 }
 
 .description .button__test:focus{
@@ -155,12 +156,54 @@ body{
     text-align: center;
     font-size: var(--text-size);
     padding: 10px;
+}
+
+.footer .button_description .message-mobile{
+    border: 1px solid;
+    padding: 20px;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
 
 }
 
-.footer .button_description .message{
-    border: 1px solid;
-    padding: 20px;
+.footer .container__buttons .message{
+    display: none;
+}
+
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .modal{
@@ -185,16 +228,67 @@ body{
     width: 100%;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 769px){
     .navbar .navbar_container{
         background-position: left;
-        margin-left: 20px;
-
+        padding: 20px 0 20px 80px;
+        text-align: left;
     }
 
     .grid_container{
         display: grid;
+    }
 
+    .grid_container .presentation{
+        width: 30%;
+    }
+    .grid_container .description{
+        width: 30%;
+    }
+
+    .presentation .text_title{
+        white-space: nowrap;
+        padding: 0px 0 0 50px;
+    }
+
+    .presentation .text_content{
+        padding: 0 0 0 50px;
+        white-space: nowrap;
+        text-align: left;
+    }
+
+    .description .text__description{
+        padding: 20px 0 20px 80px;
+        text-align: left;
+    }
+
+    .grid_container .grid__books{
+        display: none;
+    }
+
+    .footer .button_description{
+
+     }
+
+    .footer .container__buttons .message-mobile{
+        display: none;
+    }
+
+    .footer .container__buttons .message{
+        display: block;
+        padding: 10px;
+        border: 1px solid;
+        height: 90px;
+        margin: 10px;
+    }
+
+    .footer .message-mobile{
+        display: none;
+    }
+
+    .grid__books-desktop{
+        width: 60%;
+        border: 1px solid;
     }
 }
 
