@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #aacc;
+    --default-text-size: 16px;
+}
+
+div{
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    display: inline-block;
+    font-size: var(--default-text-size);
+    height: 20px;
+    width: 50%;
+}
+
+@media screen and (max-width: 900px) {
+    div{
+        width: 100%;
+    }
+}
+
+body{
+    background-color: azure;
+}
+
+.message{
+    font-size: 24px;
+    color: blue;
+}
+
+.table-users{
+    text-align: left;
+    border: 1px solid;
+}
+
+.table-users > tr{
+    border: 1px solid;
+}

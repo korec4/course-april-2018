@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --rojo-sangriento: #e52929;
+    --azul-celeste: #7e91c9;
+    --tile-size: 25px;
+    --text-size: 16px;
+    --on-hover-color: gray;
+    --brand-black: #1d1e21;
+    --bran-white: #e5d7d7;
+}
+
+body{
+    font-family: 'Finger Paint', cursive;
+    overflow-x: hidden;
+}
+
+.navbar {
+    height: 80px;
+    background-color: var(--brand-black);
+}
+
+.navbar__container{
+    max-width: 1200px;
+    height: 100%;
+    justify-content: space-around;
+    display: flex;
+    margin: 0 auto;
+}
+
+.navbar__links{
+    display: inline-block;
+}
+
+.navbar__items{
+    margin: 0 25px;
+    color: var(--bran-white);
+    font-size: var(--text-size);
+    font-weight: bold;
+    display: inline-block;
+}
+
+.navbar__button, .navbar__button-mobile{
+    background-color:  var(--azul-celeste);
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    transition: all .4s;
+
+}
+
+.navbar__button-mobile{
+    display: none;
+}
+
+.navbar__button:focus{
+    outline: none;
+}
+
+.navbar__button:hover{
+    filter: brightness(120%);
+    box-shadow: 1px 1px 5px var(--brand-black);
+}
+
+.navbar__button:active{
+    transform: translateY(3px);
+    background-color: aqua;
+}
+
+.navbar__items a {
+    color: var(--bran-white);
+}
+.navbar__items a:hover{
+    color: var(--rojo-sangriento);
+
+}
+
+.navbar__links a:link {
+    text-decoration:none;
+}
+
+.sidenav{
+    background-color: var(--bran-white);
+    position: absolute;
+    width: 300px;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    top: 0;
+    transition: right .6s;
+    visibility: hidden;
+}
+.sidenav{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+
+    .sidenav{
+        display: initial;
+    }
+
+    .sidenav-close{
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .sidenav__links{
+        margin-top: 100px;
+        text-align: center;
+        list-style: none;
+    }
+
+    .sidenav__items{
+        margin: 20px 0;
+    }
+
+    .sidenav__items a{
+        color: var(--brand-black);
+        text-decoration: none;
+        font-size: var(--text-size);
+        font-family: 'Caudex', serif;
+    }
+
+    .sidenav-active{
+        right: 0;
+        visibility: visible;
+    }
+
+    .navbar__container{
+        justify-content: flex-end;
+        padding: 0 20px;
+    }
+
+    .navbar__button, .navbar__links{
+        display: none;
+    }
+
+    .navbar__button-mobile{
+        display: inline-block;
+    }
+}
+
+
+
+

@@ -1,0 +1,22 @@
+{
+  "cuentas": [
+    {
+      "clave_User": "1001",
+      "nombre_User": "Adolfo",
+      "aPaterno_User": "Posadas",
+      "email_User": "akirauchiha0@gmail.com"
+    },
+    {
+      "clave_User": "1002",
+      "nombre_User": "Guillermo",
+      "aPaterno_User": "Gonzalez",
+      "email_User": "memo.Gon@gmail.com"
+    },
+    {
+      "clave_User": "1003",
+      "nombre_User": "Javier",
+      "aPaterno_User": "Guzman",
+      "email_User": "super_javi@gmail.com"
+    }
+  ]
+}
