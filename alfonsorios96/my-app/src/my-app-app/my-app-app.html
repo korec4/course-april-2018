@@ -1,0 +1,45 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/component-container/component-container.html">
+
+<dom-module id="my-app-app">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+        <component-container data-images="[[images]]"></component-container>
+    </template>
+
+    <script>
+        /**
+         * @customElement
+         * @polymer
+         */
+        class MyAppApp extends Polymer.Element {
+            static get is() {
+                return 'my-app-app';
+            }
+
+            static get properties() {
+                return {
+                    images: {
+                        type: Array,
+                        value: []
+                    }
+                };
+            }
+
+            connectedCallback() {
+                super.connectedCallback();
+                this.set('images', [
+                    {width: '30%', images: [{name: 'book1', url: './images/book1.jpg'}, {name: 'book2', url: './images/book2.jpg'}]},
+                    {width: '40%', images: [{name: 'book5', url: './images/book5.jpg'}]},
+                    {width: '30%', images: [{name: 'book10', url: './images/book10.jpg'}, {name: 'book9', url: './images/book9.jpg'}]}
+                ]);
+            }
+        }
+
+        window.customElements.define(MyAppApp.is, MyAppApp);
+    </script>
+</dom-module>

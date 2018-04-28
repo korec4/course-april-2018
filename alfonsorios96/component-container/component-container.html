@@ -24,7 +24,7 @@
             <template is="dom-repeat" items="[[dataImages]]" as="column">
                 <div class="images-container" style$="width:[[column.width]]">
                     <template is="dom-repeat" items="[[column.images]]" as="image">
-                        <img src="../images/[[image.url]]" alt="[[image.name]]" width="100%" height$="[[getImageHeight(column.images)]]">
+                        <img src="[[image.url]]" alt="[[image.name]]" width="100%" height$="[[getImageHeight(column.images)]]">
                     </template>
                 </div>
             </template>
