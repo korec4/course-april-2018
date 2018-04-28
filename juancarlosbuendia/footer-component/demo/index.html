@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>footer-component demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../footer-component.html">
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+      </style>
+    </custom-style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic footer-component demo</h3>
+      <demo-snippet>
+        <template>
+          <footer-component footer-sections='[
+                            {"title": "Descubre", "image": "../images/search-icon.png", "description": "Catálogo de Beek con más de <b>200,000</b> audiolibros disponibles."},
+                            {"title": "Descarga", "image": "../images/download-icon.png", "description": "<b>Lleva contigo</b> siempre tus libros favoritos y no pares de escuchar."},
+                            {"title": "Disfruta", "image": "../images/audio-icon.png", "description": "Disfruta de tus libros por <br> <b>$299 MXN</b> al mes en AudioBeeks.</span>"}
+                            ]'></footer-component>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>

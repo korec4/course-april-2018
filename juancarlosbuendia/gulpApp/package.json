@@ -1,0 +1,25 @@
+{
+  "name": "gulpapp",
+  "version": "1.0.0",
+  "description": "Practica con npm gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juancarlosbuendia/course-april-2018.git"
+  },
+  "author": "juan carlos buendia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juancarlosbuendia/course-april-2018/issues"
+  },
+  "homepage": "https://github.com/juancarlosbuendia/course-april-2018#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-coffee": "^3.0.2",
+    "gulp-connect": "^5.5.0",
+    "gulp-watch": "^5.0.0"
+  }
+}
