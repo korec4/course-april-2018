@@ -1,0 +1,109 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="footer-component">
+    <template>
+        <style>
+
+            :host {
+                display: block;
+            }
+
+            .books-container__second {
+                background-color: #36d7dc;
+            }
+
+            .books-container__second .container {
+                display: flex;
+                flex-direction: row;
+                max-width: 1000px;
+                text-align: center;
+                justify-content: space-around;
+                padding-top: 20px;
+            }
+
+            .book-title_article {
+                width: 33%;
+                opacity: .5;
+                -webkit-transition: opacity .4s;
+                transition: opacity .4s
+            }
+
+            @media screen and (max-width: 400px) {
+
+                .books-container__second .container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                }
+
+                .book-title_article {
+                    width: 100%;
+                    justify-content: center;
+                }
+
+            }
+
+            .book-title_article img {
+
+                display: inline-block;
+                /* margin-top: 30%;
+                 margin-left: 30%;*/
+            }
+
+            .book-title {
+
+                display: block;
+                color: #F5FFFA;
+                font-size: 15px;
+                font-weight: bold;
+            }
+
+        </style>
+        <footer>
+            <section class="books-container__second">
+                <div id="container" class="container">
+                    <template is="dom-repeat" items="[[footerSections]]" as="section" on-dom-change="createDescription">
+                        <section class="book-title_article">
+                            <img class="book-article__icon" src$="[[section.image]]">
+                            <h5 class="book-title">[[section.title]]</h5>
+                            <div id$="id-[[index]]" class="book-text"></div>
+                        </section>
+                    </template>
+                </div>
+            </section>
+        </footer>
+    </template>
+
+    <script>
+        /**
+         * `footer-component`
+         *
+         *
+         * @customElement
+         * @polymer
+         * @demo demo/index.html
+         */
+        class FooterComponent extends Polymer.Element {
+            static get is() {
+                return 'footer-component';
+            }
+
+            static get properties() {
+                return {
+                    footerSections: {
+                        type: Array,
+                        value: []
+                    }
+                };
+            }
+
+            createDescription(event){
+                for(let index = 0; index < this.footerSections.length; index++ ){
+                    this.$.container.querySelector(`#id-${index}`).innerHTML = this.footerSections[index].description;
+                }
+            }
+        }
+
+        window.customElements.define(FooterComponent.is, FooterComponent);
+    </script>
+</dom-module>
