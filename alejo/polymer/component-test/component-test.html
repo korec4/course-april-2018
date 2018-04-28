@@ -1,0 +1,49 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="component-test">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <div id="titulo">Hello [[userName]] you are [[userYears]] yeards old!</div>
+  </template>
+
+  <script>
+    /**
+     * `component-test`
+     * component test practice 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class ComponentTest extends Polymer.Element {
+      static get is() {
+          return 'component-test';
+      }
+      static get properties() {
+        return {
+          userName: {
+            type: String,
+            value: '',
+            observer: 'hello'
+          },
+          userYears: {
+            type: Number,
+            value: 0
+          }
+        };
+      }
+      hello(){
+        console.log('el elemento se creo');
+        console.log(this.$.titulo);
+        let tit = this.$.titulo;
+        this.textContent = 'otro texto';
+      }
+    }
+
+    window.customElements.define(ComponentTest.is, ComponentTest);
+  </script>
+</dom-module>
