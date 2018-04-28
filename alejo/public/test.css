@@ -12,24 +12,38 @@
     --on-hover-color: gray;
     --brand-black: #1d1e21;
     --bran-white: #e5d7d7;
+    --layout-width: 1200px;
 }
 
 body{
     font-family: 'Finger Paint', cursive;
-    overflow-x: hidden;
+}
+.cover{
+    background-image: radial-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("img/beach2.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+.card{
+    max-width: var(--layout-width);
 }
 
 .navbar {
     height: 80px;
     background-color: var(--brand-black);
+    position: fixed;
+    left: 0;
+    right: 0;
+
 }
 
 .navbar__container{
-    max-width: 1200px;
     height: 100%;
     justify-content: space-around;
     display: flex;
     margin: 0 auto;
+    max-width: var(--layout-width);
 }
 
 .navbar__links{
@@ -88,20 +102,87 @@ body{
 
 .sidenav{
     background-color: var(--bran-white);
-    position: absolute;
+    position: fixed;
     width: 300px;
     bottom: 0;
-    right: 0;
+    right: -300px;
     height: 100%;
     top: 0;
     transition: right .6s;
-    visibility: hidden;
-}
-.sidenav{
+
     display: none;
 }
+.sidenav{
+    display: flex;
+}
+
+.container{
+    display: block;
+    margin: 0 auto;
+    max-width: var(--layout-width);
+}
+
+.cover__title, .cover__text{
+    color: var(--bran-white);
+}
+
+.grid-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    grid-gap: 10px;
+    grid-row-gap: 5px;
+    max-width: var(--layout-width);
+    margin: 0 auto;
+}
+
+.grid-section__first{
+
+}
+
+.grid-section__h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-section_text{
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-section__second{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.grid-section img{
+    width: 100%;
+}
+
+
+
 
 @media screen and (max-width: 768px){
+
+    :root{
+        --layout-width: calc(100% - 16px);
+    }
+
+    .grid-section{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-section_text{
+        grid-column: auto;
+    }
+
+    .grid-section__second{
+        grid-row: auto;
+        grid-column: auto;
+    }
 
     .sidenav{
         display: initial;
@@ -145,6 +226,16 @@ body{
 
     .navbar__button-mobile{
         display: inline-block;
+    }
+
+    .navbar__button-mobile:hover{
+        filter: brightness(120%);
+        box-shadow: 1px 1px 5px var(--brand-black);
+    }
+
+    .navbar__button-mobile:active{
+        transform: translateY(3px);
+        background-color: aqua;
     }
 }
 

@@ -1,0 +1,65 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../paper-button/paper-button.html">
+
+<dom-module id="component-modal">
+  <template>
+    <style>
+      :host {
+        display: block;
+
+      }
+      .modal-dialog{
+          border: 1px solid blueviolet;
+          padding: 10px;
+          background-color: whitesmoke;
+          text-align: center;
+          @apply --component-modal;
+      }
+        paper-button{
+            --paper-button: {
+                background-color: #0b97c4;
+                color: white;
+            }
+        }
+    </style>
+    <div id="modal" class="modal-dialog">
+        <div class="modal-header">[[modalTitle]]  <emo-ji type="raised_hands"></emo-ji></div>
+        <div class="modal-body">
+            <slot name="body"></slot>
+        </div>
+        <div class="modal-footer">
+            <paper-button raised class="indigo">Inicia sesión en beek</paper-button>
+        </div>
+    </div>
+  </template>
+  <script src="../emo-ji/dist/emoji.js"></script>
+    <script>
+        document.registerElement('emo-ji', { prototype: EmojiElement });
+    </script>
+  <script>
+    /**
+     * `component-modal`
+     * component modal 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class ComponentModal extends Polymer.Element {
+      static get is() { return 'component-modal'; }
+      static get properties() {
+        return {
+          modalTitle: {
+            type: String,
+            value: ''
+          }
+        };
+      }
+
+    }
+
+
+
+    window.customElements.define(ComponentModal.is, ComponentModal);
+  </script>
+</dom-module>

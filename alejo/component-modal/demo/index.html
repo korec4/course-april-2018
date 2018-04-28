@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>component-modal demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../component-modal.html">
+
+    <style>
+      component-modal{
+        --component-modal:{
+          background-color: yellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic component-modal demo</h3>
+      <demo-snippet>
+        <template>
+          <component-modal modal-title="Felicidades!">
+            <div slot="body">
+              <h3>
+                Ya tienes audiolibros por 30 días GRATIS
+              </h3>
+              <p>Tu periodo de prueba es del 10/04/2018 al 10/05/2018</p>
+              <p>Inicia tu sesión en beek y disfruta de tus audiolibros favoritos.</p>
+            </div>
+          </component-modal>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>
