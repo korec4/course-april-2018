@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My first page</title>
+    <style>
+        .error-zone {
+            color: red;
+            font-size: 14px;
+        }
+
+        table td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<h2>My first page with i18n</h2>
+<div class="error-zone" id="connection">
+
+</div>
+<div id="content"></div>
+<script>
+    'use strict';
+
+    const URL = 'http://localhost:3000/mapLanguages';
+
+    const getRows = (map) => {
+        let rowValues = ``;
+        for (let [key, value] of map) {
+            rowValues += `
+                <tr>
+                    <td>${key}</td>
+                    <td>${value}</td>
+                </tr>
+            `;
+        }
+        return rowValues;
+    };
+
+    const buildTable = (map) => {
+        let tableTemplate = `
+            <table>
+                <thead>
+                    <th>Key</th>
+                    <th>Value</th>
+                </thead>
+                <tbody>
+                     ${getRows(map)}
+                </tbody>
+            </table>`;
+        document.getElementById('content').innerHTML = tableTemplate;
+    };
+
+    fetch(URL, {
+        method: 'GET',
+        mode: 'cors',
+        cache: 'default'
+    })
+        .then(response => response.text())
+        .then(payload => {
+            const dictionary = new Map();
+            const payloadObj = JSON.parse(payload);
+            for (let key in payloadObj) {
+                dictionary.set(key, payloadObj[key]);
+            }
+            buildTable(dictionary);
+            document.body.dispatchEvent(new Event('language-changed'));
+            document.getElementById('connection').innerText = '';
+        })
+        .catch(error => {
+            document.getElementById('connection').innerText = `${error} Connection failed, try ${URL} in POSTMAN or other service`;
+        });
+</script>
+</body>
+</html>
